@@ -1650,3 +1650,7 @@ html.lb-open { overflow: hidden; }
 .rpg__ab { position: relative; width: 164px; height: 116px; flex: none; }
 .rpg__ab .rpg__a { position: absolute; right: 0; top: 0; }
 .rpg__ab .rpg__b { right: auto; left: 0; top: auto; bottom: 0; }
+
+/* Footer hint: keyboard wording on desktop, pad wording on touch screens */
+.foot-touch { display: none; }
+@media not ((hover: hover) and (pointer: fine)) { .foot-keys { display: none; } .foot-touch { display: inline; } }

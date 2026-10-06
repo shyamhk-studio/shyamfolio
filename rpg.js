@@ -137,7 +137,7 @@
     ["Shyam! Have you eaten? You can't go anywhere on an empty stomach.", "Since you were small you were drawing on every book and every wall. Now they call it design!", "Okay, go, go. Work hard, be nice to people, and call me when you reach!"]);
   door('home', 'Home', ["Home. Sketchbooks stacked to the ceiling.", "Everything started with doodles in the margins."]);
 
-  sign(13, 10, 'Signpost', ["MANIPAL UNIVERSITY", "Bachelors in Instrumentation & Control Engineering, 2015 – 2019."]);
+  sign(13, 10, 'Signpost', ["MANIPAL UNIVERSITY", "Bachelor's in Instrumentation & Control Engineering, 2015 – 2019."]);
   npc(20, 10, { hair: '#d8d8d8', skin: '#b87c58', shirt: '#f4f4f4', pants: '#505866', coat: true }, 'Professor',
     ["Sensors, circuits, control systems. Solid engineering work!", "But I keep finding sketches in the margins of your lab notes...", "Systems thinking will serve you well, wherever you go. Take this!"], 0);
   door('manipal', 'Manipal University', ["Lecture halls, labs and a lot of late-night doodling."]);
@@ -183,9 +183,9 @@
 
   sign(75, 10, 'Signpost', ["2024: THE BIG MOVE", "From India to Melbourne, Australia. New city, new chapter."]);
 
-  sign(82, 10, 'Signpost', ["RMIT UNIVERSITY, MELBOURNE", "Masters in Communication Design, 2024 – 2026."]);
+  sign(82, 10, 'Signpost', ["RMIT UNIVERSITY, MELBOURNE", "Master of Communication Design, 2024 – 2026."]);
   npc(89, 10, { hair: '#e0b050', skin: '#f0c8a0', shirt: '#e0403a', pants: '#3a4658' }, 'Classmate',
-    ["G'day! Welcome to Melbourne.", "Masters in Communication Design, eh? Studio crits are no joke.", "Best coffee's in the laneways. Here, you've earned this!"], 5);
+    ["G'day! Welcome to Melbourne.", "Master of Communication Design, hey? Studio crits are no joke.", "Best coffee's in the laneways. Here, you've earned this!"], 5);
   obj('graffiti', 92, 8, 'Laneway', ["A graffiti laneway.", "Perfect backdrop for a portfolio photo..."]);
   obj('graffiti', 93, 8, 'Laneway', ["A graffiti laneway.", "Perfect backdrop for a portfolio photo..."]);
   obj('tramstop', 86, 14, 'Tram stop', ["Tram stop. Don't forget to tap on!"]);
@@ -232,9 +232,10 @@
   })(glanceRoom);
   var arcadeRoom = makeRoom({ id: 'nostra', w: 15, h: 10, exit: { x: 7, y: 9 }, back: { x: 73, y: 10 },
     name: 'Nostra Arcade', years: 'Glance gaming · 2022 – 2024',
-    pieces: [ { id: 'nostra-brand', x: 2, w: 3, label: 'BRAND', neon: '#ff4fd8' },
-              { id: 'nostra-web', x: 6, w: 3, label: 'WEB', neon: '#ffb000' },
-              { id: 'nostra-social', x: 10, w: 3, label: 'SOCIAL', neon: '#38d0ff' } ] });
+    pieces: [ { id: 'nostra-brand', x: 1, w: 3, label: 'BRAND', neon: '#ff4fd8' },
+              { id: 'nostra-report', x: 4, w: 3, label: 'REPORT', neon: '#ff5a7a' },
+              { id: 'nostra-web', x: 8, w: 3, label: 'WEB', neon: '#ffb000' },
+              { id: 'nostra-social', x: 11, w: 3, label: 'SOCIAL', neon: '#38d0ff' } ] });
   (function (R) {
     function add(o) { R.things.push(o); }
     R.pieces.forEach(function (pc) {
@@ -246,7 +247,7 @@
     furn([13], 5, 'Trophy stand', ["A shelf of tournament trophies.", "Nostra ran leaderboards and tournaments right on the lock screen."]);
     add({ kind: 'npc', id: 'gamer', x: 3, y: 6, dir: 'down', turnAt: 3,
       look: { hair: '#ff4fd8', skin: '#b07850', shirt: '#5a2cc8', pants: '#1c1633', cap: '#38d0ff' }, who: 'Gamer',
-      lines: ["Welcome to Nostra, the gaming side of the Glance lock screen!", "Hundreds of games, live streams and tournaments, with nothing to download.", "You worked on the brand, the website and the socials? Try those three cabinets!"] });
+      lines: ["Welcome to Nostra, the gaming side of the Glance lock screen!", "Hundreds of games, live streams and tournaments, with nothing to download.", "You worked on the brand, the trends report, the website and the socials? Try those four cabinets!"] });
   })(arcadeRoom);
   var studioRoom = makeRoom({ id: 'eloelo', w: 15, h: 10, exit: { x: 7, y: 9 }, back: { x: 52, y: 10 },
     name: 'Elo Live Studio', years: 'Eloelo · 2021 – 2022',
@@ -284,7 +285,7 @@
 
   // thumbnails of the real work, painted small into the frames
   var THUMBS = { novo: ['assets/novo-final-filled.svg'], ftb: ['assets/ftb-wall-1.webp', 'assets/ftb-wall-2.webp', 'assets/ftb-wall-3.webp'], oneweather: ['assets/1w-wall-04.jpg'],
-    'nostra-brand': ['assets/nostra-bb-18.webp'],
+    'nostra-brand': ['assets/nostra-bb-18.webp'], 'nostra-report': ['assets/nostra-report-1.webp'],
     'elo-rebrand': ['assets/elo-mascot.svg'], 'elo-stickers': ['assets/elo-sticker-bas.webp'], 'elo-cards': ['assets/elo-card-singing.webp'], 'nostra-web': ['assets/nostra-web-single.webp'], 'nostra-social': ['assets/nostra-soc-top5-1.webp'],
     abyx: ['assets/abyx-cover.webp'], buzzar: ['assets/buzzar-tote.webp'], unhappy: ['assets/uhm-5.webp'] };
   var thumbImg = {};
@@ -465,7 +466,7 @@
     px(g, mx + 1, my + 1, 14, 13, P.ink); px(g, mx + 2, my + 2, 12, 11, '#ff4fd8');
     for (x = 0; x < 3; x++) px(g, mx + 4 + x * 3, my + 4, 1, 7, '#ffb0ee');
     // the four-dot mark between cabinets, in neon
-    [[5 * T + 8, 20], [9 * T + 8, 20]].forEach(function (c) {
+    [[7 * T + 8, 20]].forEach(function (c) {
       [[0, -5, '#ff1a66'], [-5, 0, '#ff00ff'], [5, 0, '#ffb000'], [0, 5, '#00c3ff']].forEach(function (d) {
         g.fillStyle = P.ink; blob(g, c[0] + d[0], c[1] + d[1], 3, 3); g.fillStyle = d[2]; blob(g, c[0] + d[0], c[1] + d[1], 2, 2);
       });
@@ -1258,9 +1259,9 @@
     ["The College Fever, 2019 – 2020. The first design job: social posts and event posters as an intern."],
     ["Supr Daily by Swiggy, 2020 – 2021. Banners, brand collabs with Cadbury, Nestlé and Monster Energy.", "Plus a user manual that made the delivery execs' first week easier."],
     ["Eloelo, 2021 – 2022. Rebranded the app to Elo Live and drew Bollywood stickers for live chat.", "Share cards for streams lifted average viewers per stream by 150%."],
-    ["Glance, 2022 – 2024. Senior Graphic Designer. Branded Novo and ran brand and social for Nostra.", "The 1Weather launch campaign brought 50,000 downloads in a month."],
+    ["Glance, 2022 – 2024. Senior Graphic Designer. Designed the Novo logo, and Nostra's brand guidelines, trends report and social posts.", "The 1Weather launch campaign brought 50,000 downloads in a month."],
     ["2024: the big move, from India to Melbourne."],
-    ["RMIT University, 2024 – 2026. Masters in Communication Design.", "The crit room is open: ABYX, Buzzar and UnHappy Meal are on the wall."],
+    ["RMIT University, 2024 – 2026. Master of Communication Design.", "The crit room is open: ABYX, Buzzar and UnHappy Meal are on the wall."],
     ["Now: looking for visual design roles in Australia.", "That's the tour! Walk around, open the Map to jump anywhere, or switch to the classic portfolio."]
   ];
   function tourStop(i) {
@@ -1526,6 +1527,23 @@
         { src: 'assets/nostra-bb-47.webp', alt: 'Nostra brand book page: Digital ad templates', cap: 'Digital ad templates', bg: '#ffffff' } ],
       link: 'nostra.html'
     },
+    'nostra-report': {
+      kicker: 'Glance · Nostra · Report design', title: 'Gaming Trends Report 2023', role: 'Report layout, charts and data pages',
+      text: ["I designed the Nostra Gaming Trends Report 2023: a 38-page report on how people play on the lock screen across India and Indonesia, written for game developers and partners.",
+             "The job was to turn a long document of figures into something a busy reader could scan: one idea per spread, the key number set large, and charts drawn in the brand colours."],
+      stats: [['38', 'Pages in the report'], ['2', 'Markets covered: India and Indonesia']],
+      images: [
+        { src: 'assets/nostra-report-1.webp', alt: 'Report cover: a player with a phone and the line It hits different', cap: 'Cover', bg: '#ffffff' },
+        { src: 'assets/nostra-report-2.webp', alt: 'Report contents page with six numbered sections', cap: 'Contents', bg: '#ffffff' },
+        { src: 'assets/nostra-report-8.webp', alt: 'Report spread: two diverse geographies, with large headline figures', cap: 'Headline figures', bg: '#ffffff' },
+        { src: 'assets/nostra-report-12.webp', alt: 'Report spread: donut charts and a map of India showing daily active users', cap: 'Charts and map', bg: '#ffffff' },
+        { src: 'assets/nostra-report-13.webp', alt: 'Report spread: a line chart of gaming time through the day', cap: 'Time-of-day chart', bg: '#ffffff' },
+        { src: 'assets/nostra-report-17.webp', alt: 'Report spread: gaming week for e-sports fans', cap: 'Section spread', bg: '#ffffff' },
+        { src: 'assets/nostra-report-22.webp', alt: 'Report spread: one year in Indonesia shown as four growth figures', cap: 'Growth figures', bg: '#ffffff' },
+        { src: 'assets/nostra-report-27.webp', alt: 'Report spread: a three-step integration diagram for developers', cap: 'Process diagram', bg: '#ffffff' },
+        { src: 'assets/nostra-report-30.webp', alt: 'Report section opener: The Nostra power rankings', cap: 'Section opener', bg: '#ffffff' } ],
+      link: 'nostra.html'
+    },
     'nostra-web': {
       kicker: 'Glance · Nostra · Website', title: 'Nostra Website', role: 'Initial look of the website',
       text: ["I designed the initial look of the Nostra website: a mobile-first homepage that explains what makes Nostra different, one idea per screen. Playing, watching, competing and discovery come first, then community, live streaming, esports and the phones Nostra ships on.",
@@ -1540,7 +1558,8 @@
     'nostra-social': {
       kicker: 'Glance · Nostra · Social media', title: 'Nostra Social Media', role: 'In charge of Nostra\u2019s social channel',
       text: ["I was in charge of Nostra\u2019s social media channel: designing the posts and keeping the feed consistent with the brand.",
-             "That meant event campaigns, like Nostra at Gamescom 2023 and a Nostra and InMobi evening in Tokyo, plus recurring series for game developers: the monthly Top 5 games on Nostra and theme-based promotions like Christmas Carnival."],
+             "That meant event campaigns, like Nostra at Gamescom 2023 and a Nostra and InMobi evening in Tokyo, plus recurring series for game developers: the monthly Top 5 games on Nostra and theme-based promotions like Christmas Carnival.",
+             "I also designed the Samsung partnership announcement, a LinkedIn ad series for developers, and a case study carousel on how the studio Bravestars reached 4 million users in two months."],
       stats: [],
       images: [
         { src: 'assets/nostra-soc-gamescom.webp', alt: 'Three Nostra social posts inviting partners to the Gamescom 2023 booth', cap: 'Gamescom 2023 campaign', bg: '#18142a' },
@@ -1548,7 +1567,14 @@
         { src: 'assets/nostra-soc-top5.webp', alt: 'Top 5 Games of December series: six square posts', cap: 'Monthly series: Top 5 games on Nostra', bg: '#18142a' },
         { src: 'assets/nostra-soc-theme.webp', alt: 'Four square posts about theme-based game promotions', cap: 'Theme-based promotions for game developers', bg: '#18142a' },
         { src: 'assets/nostra-soc-top5-1.webp', alt: 'Top 5 Games December, number 1: Magic Princess', cap: 'Top 5 post, full size', bg: '#18142a' },
-        { src: 'assets/nostra-soc-theme-4.webp', alt: 'Christmas Carnival theme of the month post', cap: 'Christmas Carnival post, full size', bg: '#18142a' } ],
+        { src: 'assets/nostra-soc-theme-4.webp', alt: 'Christmas Carnival theme of the month post', cap: 'Christmas Carnival post, full size', bg: '#18142a' },
+        { src: 'assets/nostra-samsung-1.webp', alt: 'Announcement post: Celebrating a new partnership, Nostra in partnership with Samsung', cap: 'Samsung partnership post', bg: '#18142a' },
+        { src: 'assets/nostra-samsung-3.webp', alt: 'Announcement post: A partnership that hits different, Nostra and Samsung', cap: 'Samsung partnership post, second direction', bg: '#18142a' },
+        { src: 'assets/nostra-ad-1.webp', alt: 'LinkedIn ad: Maximise game discovery with Nostra\u2019s lock screen advantage', cap: 'LinkedIn ad for developers, 1 of 3', bg: '#18142a' },
+        { src: 'assets/nostra-ad-2.webp', alt: 'LinkedIn ad: Amplify your game\u2019s reach through 90 million plus users', cap: 'LinkedIn ad for developers, 2 of 3', bg: '#18142a' },
+        { src: 'assets/nostra-ad-5.webp', alt: 'LinkedIn ad: Increased monetization potential from day one', cap: 'LinkedIn ad for developers, 3 of 3', bg: '#18142a' },
+        { src: 'assets/nostra-case-1.webp', alt: 'Carousel slide: 4 million unique users in just 2 months', cap: 'Bravestars case study: hook', bg: '#18142a' },
+        { src: 'assets/nostra-case-4.webp', alt: 'Carousel slide: Impact, four results figures around a phone', cap: 'Bravestars case study: impact', bg: '#18142a' } ],
       link: 'nostra.html'
     },
     'elo-rebrand': {
@@ -1566,7 +1592,7 @@
     'elo-stickers': {
       kicker: 'Eloelo · Illustration', title: 'Bollywood Stickers', role: 'Illustrated stickers for live chat',
       text: ["The brief was a set of stickers that would help viewers react to streamers in a livelier way, right in the comments.",
-             "I chose Bollywood as the theme, because it’s the most relatable subject for the audience, and illustrated iconic movie moments and dialogues as sticker reactions: from “Bas!!” to “Mogambo khush hua!”"],
+             "I chose Bollywood as the theme, because it was the most relatable subject for the audience, and illustrated iconic movie moments and dialogues as sticker reactions: from “Bas!!” to “Mogambo khush hua!”"],
       stats: [],
       images: [
         { src: 'assets/elo-stickers-all.webp', alt: 'All five Bollywood comment stickers', cap: 'The sticker set', bg: '#fff8ec' },
@@ -1578,12 +1604,12 @@
       link: 'eloelo-stickers.html'
     },
     'elo-cards': {
-      kicker: 'Eloelo · Growth design', title: 'Sharable Stream Cards', role: 'Share cards for live streams',
+      kicker: 'Eloelo · Growth design', title: 'Shareable Stream Cards', role: 'Share cards for live streams',
       text: ["Streamers and viewers could share a stream from the app, and this card is what got shared to other social platforms to invite more people in.",
              "I designed a themed card for each kind of stream: quizzes, comedy, cricket, Bollywood, chit chat, singing, news and sports. Each one has the streamer’s photo in a glowing live ring and a clear “Watch this live on eloelo app” call to action."],
       stats: [['+150%', 'Average viewers per stream after the cards went live']],
       images: [
-        { src: 'assets/elo-cards-all.webp', alt: 'All eight sharable stream cards', cap: 'Eight stream themes', bg: '#221a3c' },
+        { src: 'assets/elo-cards-all.webp', alt: 'All eight shareable stream cards', cap: 'Eight stream themes', bg: '#221a3c' },
         { src: 'assets/elo-card-quiz.webp', alt: 'Share card: Play Quiz live', cap: 'Quiz', bg: '#221a3c' },
         { src: 'assets/elo-card-comedy.webp', alt: 'Share card: Live Comedy', cap: 'Live comedy', bg: '#221a3c' },
         { src: 'assets/elo-card-premier-league.webp', alt: 'Share card: Eloelo Premier League', cap: 'Eloelo Premier League', bg: '#221a3c' },
@@ -1628,9 +1654,11 @@
       link: 'unhappy-meal.html'
     },
     novo: {
-      kicker: 'Glance · Brand identity', title: 'Novo Branding', role: 'Logo, brand book and brand elements',
+      kicker: 'Glance · Brand identity', title: 'Novo Brand Identity', role: 'Logo, logo presentation, launch posters and mailers',
       text: ["Novo is the news app on the Glance lock screen: breaking headlines and personalised updates, without unlocking your phone.",
-             "The brief was a logo for the brand, with the tagline \u201cWhat\u2019s New\u201d. After studying Google News, Inshorts, Flipboard and Apple News, I pitched four directions. The chosen mark grew into a full brand book, with a quotation-mark brand element taken from the negative space of the \u201cO\u201d."],
+             "The brief was a logo with the tagline \u201cWhat\u2019s New\u201d. After studying Google News, Inshorts, Flipboard and Apple News, I drew dozens of wordmarks and pitched four directions.",
+             "The final mark hides a pair of quotation marks inside the letters. The name comes from the Latin novus, meaning new, and the lower-case type and Novo Orange keep it friendly and easy to spot on a lock screen.",
+             "I designed the deck that presented the logo, directed the logo animation, worked on the brand book with the Glance brand team, and designed the posters and mailers for the internal launch."],
       stats: [['10\u00d7', 'Average views per article, from 2,000 to 20,000'], ['18%', 'Average click-through rate, up from 4%']],
       images: [
         { src: 'assets/novo-final-filled.svg', alt: 'Final Novo logo reversed out of Novo Orange', cap: 'Final logo, reversed out of Novo Orange', bg: '#ff4f00', pad: true },
@@ -1638,7 +1666,19 @@
         { src: 'assets/novo-initial-1.svg', alt: 'Initial Novo logo concept 1', cap: 'Initial concept 1 of 4', bg: '#ffffff', pad: true },
         { src: 'assets/novo-initial-2.svg', alt: 'Initial Novo logo concept 2', cap: 'Initial concept 2 of 4', bg: '#ffffff', pad: true },
         { src: 'assets/novo-initial-3.svg', alt: 'Initial Novo logo concept 3', cap: 'Initial concept 3 of 4', bg: '#ffffff', pad: true },
-        { src: 'assets/novo-initial-4.svg', alt: 'Initial Novo logo concept 4', cap: 'Initial concept 4 of 4', bg: '#ffffff', pad: true } ],
+        { src: 'assets/novo-initial-4.svg', alt: 'Initial Novo logo concept 4', cap: 'Initial concept 4 of 4', bg: '#ffffff', pad: true },
+        { src: 'assets/novo-explore-1.webp', alt: 'Working sheet: a grid of black Novo wordmark options', cap: 'Wordmark exploration, sheet 1', bg: '#ffffff' },
+        { src: 'assets/novo-explore-3.webp', alt: 'Working sheet: more Novo wordmark options', cap: 'Wordmark exploration, sheet 2', bg: '#ffffff' },
+        { src: 'assets/novo-deck-1.webp', alt: 'Presentation cover slide: Novo, logo design presentation, June 2023', cap: 'Logo presentation: cover', bg: '#ffffff' },
+        { src: 'assets/novo-deck-3.webp', alt: 'Slide titled Visual Element, explaining the quotation marks', cap: 'Logo presentation: the visual element', bg: '#ffffff' },
+        { src: 'assets/novo-deck-8.webp', alt: 'Slide showing the final Novo logo in orange', cap: 'Logo presentation: the final mark', bg: '#ffffff' },
+        { src: 'assets/novo-bb-10.webp', alt: 'Brand book page: Novo and Glance logos side by side', cap: 'Brand book: co-branding with Glance', bg: '#f6f3ee' },
+        { src: 'assets/novo-bb-35.webp', alt: 'Brand book page: quotation marks used over an image', cap: 'Brand book: quotes on images', bg: '#f6f3ee' },
+        { src: 'assets/novo-bb-42.webp', alt: 'Brand book page: tone of voice', cap: 'Brand book: tone of voice', bg: '#f6f3ee' },
+        { src: 'assets/novo-poster-1.webp', alt: 'Orange poster: A new way to news is coming your way', cap: 'Teaser poster', bg: '#ff3d00' },
+        { src: 'assets/novo-poster-2.webp', alt: 'Orange poster with the Novo logo: Bringing life back to news', cap: 'Launch poster', bg: '#ff3d00' },
+        { src: 'assets/novo-mail-3.webp', alt: 'Navy mailer: We are bringing life back to news', cap: 'Reveal mailer', bg: '#12122e' },
+        { src: 'assets/novo-mail-4.webp', alt: 'Orange mailer: Novo is here, fresh and new', cap: 'Launch-day mailer', bg: '#ff3d00' } ],
       link: 'novo.html'
     },
     ftb: {
@@ -1654,9 +1694,9 @@
     },
     oneweather: {
       kicker: 'Glance · Brand launch', title: '1Weather: Own the Day', role: 'Key visuals and posters',
-      text: ["1Weather is a hyperlocal weather forecast app trusted by 100 million+ users. For its brand launch I designed the key visuals and marketing collateral, like posters, in line with the brand guidelines.",
+      text: ["1Weather is a hyperlocal weather forecast app with over 100 million users. For its brand launch I designed the key visuals and marketing collateral, like posters, in line with the brand guidelines.",
              "The campaign line, \u201cOwn the day\u201d, frames the forecast as a way to plan your day better, whether that means fresh snow, a beach day, or leaving the office before the rain."],
-      stats: [['50,000', 'Downloads in the first month, about 200% up'], ['+25%', 'Daily active users after the launch']],
+      stats: [['50,000', 'Downloads in the first month, about 200% higher than before'], ['+25%', 'Daily active users after the launch']],
       images: [
         { src: 'assets/1w-wall-03.jpg', alt: 'Key visual: a snowboarder hiking through fresh snow, \u201cOwn the day\u201d', cap: 'Key visual 1 of 4' },
         { src: 'assets/1w-wall-04.jpg', alt: 'Key visual: relaxing in a deck chair on a sunny beach, \u201cOwn the day\u201d', cap: 'Key visual 2 of 4' },
