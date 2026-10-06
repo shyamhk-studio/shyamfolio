@@ -148,10 +148,14 @@
   door('fever', 'The College Fever', ["A poster-covered office. Your first design desk is in here."]);
 
   sign(35, 10, 'Signpost', ["SUPR DAILY by SWIGGY", "Visual Designer, Mar 2020 – Oct 2021."]);
-  npc(43, 10, { hair: '#2a2020', skin: '#9c6a48', shirt: '#fc8019', pants: '#34384a', cap: '#fc8019' }, 'Delivery exec',
+  npc(37, 13, { hair: '#2a2020', skin: '#9c6a48', shirt: '#fc8019', pants: '#34384a', cap: '#fc8019' }, 'Delivery exec',
     ["Morning! Milk run done by 7am.", "That user manual you designed for us delivery execs? Made my first week so much easier.", "And I keep seeing your banners and brand collabs everywhere: Cadbury, Nestlé, Monster Energy!"]);
   npc(41, 10, { hair: '#2a1c18', skin: '#b88660', shirt: '#3fa64a', pants: '#34384a' }, 'Michelle',
     ["Shyam! I'm Michelle, your manager here at Supr Daily.", "I could see a designer in you before you called yourself one.", "You just needed someone to hand you the brief and trust you with it. Look how far you've come! This one's yours."], 2);
+  npc(43, 10, { hair: '#1e1a1a', skin: '#a8704c', shirt: '#8a94a8', pants: '#34384a' }, 'Tarun',
+    ["Shyam! It's Tarun. Fine, Bob. Everyone here calls me Bob.", "I showed you a design trick or two back then. Okay, maybe a few hundred.", "Good to see you still use them. Michelle, Rahul, you and me: best corner of the marketing team."], 2);
+  npc(45, 10, { hair: '#1c1616', skin: '#b07850', shirt: '#f4b6c2', pants: '#3a4462' }, 'Rahul',
+    ["Rahul here. Words guy.", "A good design gets a look. A good one-liner gets remembered.", "Keep it quirky, keep it short. See? That was six words."], 2);
   obj('crates', 36, 13, 'Milk crates', ["Crates of fresh milk.", "Somebody designed the push notification that sold all of these."]);
   door('supr', 'Supr Daily', ["The shop smells like fresh bread and push notifications."]);
 
@@ -162,6 +166,14 @@
   door('eloelo', 'Eloelo', ["Ring lights and cameras everywhere. Everyone is live."]);
   things[things.length - 1].enter = 'eloelo';
 
+  npc(54, 10, { hair: '#1c1616', skin: '#c89878', shirt: '#f6f4ee', pants: '#3a4050' }, 'Nayanika',
+    ["Hey Shyam! Nayanika, from the Eloelo design team.", "Still playing it safe with your colours? Go bolder. It always works out.", "And keep illustrating. A sketchbook should never be empty."], 3);
+  npc(56, 13, { hair: '#1c1616', skin: '#b88660', shirt: '#e6d2a4', pants: '#3a3a4a' }, 'Vinay',
+    ["Hold that pose... and cut! Vinay, on camera.", "Shubham and I handled the shoots, the edits and the motion graphics at Eloelo.", "And we never once said no to chai."], 3);
+  things[things.length - 1].dir = 'up';
+  npc(58, 13, { hair: '#2a2020', skin: '#b07850', shirt: '#3f5f9a', pants: '#2e2e3e' }, 'Shubham',
+    ["Rolling! This one goes straight into the edit.", "A good frame is like a good layout: know where the eye goes first.", "Chai after this take? Call Debasish and Arnab."], 3);
+  things[things.length - 1].dir = 'up';
   var tapriLines = ["A chai tapri. One cutting chai, extra adrak.", "Shyam's unofficial meeting room at Eloelo."];
   obj('kiosk', 56, 9, 'Chai tapri', tapriLines); obj('kiosk', 57, 9, 'Chai tapri', tapriLines);
   npc(58, 9, { hair: '#1e1a1a', skin: '#b07850', shirt: '#ffc83a', pants: '#3a4050' }, 'Debasish',
@@ -998,7 +1010,7 @@
   // look: {hair, skin, shirt, pants, jacket?, tee?, glasses?, beard?, cap?, coat?}
   // sprites from sprites.js: palette-indexed grids, outlined here in ink
   var SPR = window.DQ_SPRITES || null;
-  var NPC_SPRITE = { 'Mom': 'mom', 'Professor': 'professor', 'Kushal': 'kushal', 'Michelle': 'michelle', 'Debasish': 'debasish', 'Arnab': 'arnab', 'Delivery exec': 'delivery-exec',
+  var NPC_SPRITE = { 'Mom': 'mom', 'Professor': 'professor', 'Kushal': 'kushal', 'Michelle': 'michelle', 'Debasish': 'debasish', 'Arnab': 'arnab', 'Tarun': 'tarun', 'Rahul': 'rahul', 'Nayanika': 'nayanika', 'Vinay': 'vinay', 'Shubham': 'shubham', 'Delivery exec': 'delivery-exec',
     'Streamer': 'streamer', 'Colleague': 'colleague', 'Cricket fan': 'cricket-fan', 'Classmate': 'classmate', 'Design lead': 'lead', 'Tutor': 'lead', 'Gamer': 'gamer', 'Moderator': 'moderator' };
   function gridSprite(key, rows, pal, flip) {
     if (cache[key]) return cache[key];
