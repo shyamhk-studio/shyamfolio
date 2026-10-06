@@ -1645,3 +1645,8 @@ html.lb-open { overflow: hidden; }
   .lb__prev { left: calc(50% - 62px); } .lb__next { right: calc(50% - 62px); }
   .lb__cap { font-size: 13px; bottom: 12px; }
 }
+
+/* A and B buttons, set on a diagonal like a handheld */
+.rpg__ab { position: relative; width: 148px; height: 112px; flex: none; }
+.rpg__ab .rpg__a { position: absolute; right: 0; top: 0; }
+.rpg__ab .rpg__b { right: auto; left: 0; top: auto; bottom: 0; width: 62px; height: 62px; border-radius: 20px; background: var(--butter); color: var(--ink); -webkit-text-stroke: 0; font-size: 22px; }

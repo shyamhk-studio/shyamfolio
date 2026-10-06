@@ -1146,17 +1146,34 @@
     if (KEY[e.key]) { e.preventDefault(); press(KEY[e.key]); }
     else if (ACT[e.key]) { e.preventDefault(); if (!e.repeat) action(); }
     else if (e.key === 'x' || e.key === 'X' || e.key === 'Escape') {
-      if (S.dlg) { e.preventDefault(); if (typeof S.dlg.thing.tour === 'number') { S.dlg = null; ui.dialog.hidden = true; S.tour = null; } else closeDialog(); }
+      if (S.dlg) { e.preventDefault(); back(); }
+      else if (e.key !== 'Escape' && S.mode === 'play') { e.preventDefault(); back(); }
     }
     else if (e.key === 'm' || e.key === 'M') { e.preventDefault(); openMap(); }
   });
   root.addEventListener('keyup', function (e) { if (KEY[e.key]) release(KEY[e.key]); });
   root.addEventListener('blur', function () { held = []; }, true);
 
+  /* B button: back out of a conversation, or open and close the map */
+  function back() {
+    if (!S || S.mode === 'title') return;
+    if (S.dlg) { if (typeof S.dlg.thing.tour === 'number') { S.dlg = null; ui.dialog.hidden = true; S.tour = null; } else closeDialog(); return; }
+    if (S.mode === 'map') { closeMap(); return; }
+    if (S.mode === 'play' && !S.fade) openMap();
+  }
+  (function () {
+    var a = root.querySelector('.rpg__a');
+    if (!a || root.querySelector('.rpg__b')) return;
+    var wrap = document.createElement('div'); wrap.className = 'rpg__ab';
+    a.parentNode.insertBefore(wrap, a);
+    var b = document.createElement('button'); b.type = 'button'; b.tabIndex = -1; b.className = 'rpg__a rpg__b'; b.textContent = 'B';
+    b.setAttribute('data-pad', 'b');
+    wrap.appendChild(b); wrap.appendChild(a);
+  })();
   root.querySelectorAll('[data-pad]').forEach(function (btn) {
     var d = btn.getAttribute('data-pad');
-    function down(e) { e.preventDefault(); root.focus({ preventScroll: true }); if (d === 'a') action(); else press(d); }
-    function up() { if (d !== 'a') release(d); }
+    function down(e) { e.preventDefault(); root.focus({ preventScroll: true }); if (d === 'a') action(); else if (d === 'b') back(); else press(d); }
+    function up() { if (d !== 'a' && d !== 'b') release(d); }
     btn.addEventListener('pointerdown', down);
     btn.addEventListener('pointerup', up); btn.addEventListener('pointerleave', up); btn.addEventListener('pointercancel', up);
   });
