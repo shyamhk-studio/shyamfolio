@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ABYX · Shyam Harikumar</title>
+  <meta name="description" content="ABYX: a speculative type system that maps the alphabet to three-button combinations on a game controller, for accessible communication.">
+  <link rel="preload" href="fonts/montserrat-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="case">
+    <a class="btn case__top" href="portfolio.html#rmit"><img class="btn__back" src="assets/back.svg" alt="">Back</a>
+
+    <article class="sheet">
+      <p class="sheet__kicker">RMIT · Typography · Speculative design</p>
+      <h1 class="sheet__title">ABYX: A Controller-Based Type System</h1>
+      <dl class="case-meta">
+        <div><dt>Role</dt><dd>Concept, type system, specimen and web app</dd></div>
+        <div><dt>Course</dt><dd>Master of Communication Design, RMIT</dd></div>
+        <div><dt>Year</dt><dd>2025</dd></div>
+        <div><dt>Type</dt><dd>Solo project</dd></div>
+      </dl>
+      <p>ABYX is a speculative type system for accessible communication. It maps the 26 letters of the Latin alphabet to three-button combinations using only the A, B, X and Y buttons of a game controller, so that someone with limited hand movement can type with a thumb.</p>
+
+      <img class="abyx-cover" src="assets/abyx-cover.webp" alt="A white game controller with its four coloured face buttons beside the letters A, B, Y and X repeated three times">
+
+      <h2>The Idea</h2>
+      <p>Game controllers are already designed for comfort, repetition and many kinds of hand movement. ABYX borrows that logic to make a new kind of alphabet: one that is tactile and digital, for people who face barriers with keyboards and touchscreens.</p>
+      <p>Each letter is a character and also a gesture: a short sequence of presses that can be made with one thumb or with adaptive hardware.</p>
+
+      <h2>How It Works</h2>
+      <p>Four buttons pressed three times give 64 possible combinations, more than enough for 26 letters. The letters are assigned in a fixed, countable order, so the system can be learned as a pattern and not memorised one letter at a time.</p>
+      <div class="abyx-hands">
+        <img src="assets/abyx-hand-1.webp" alt="A hand holding a black game controller with the thumb on the face buttons" loading="lazy">
+        <img src="assets/abyx-hand-2.webp" alt="The same controller with the thumb pressing a different face button" loading="lazy">
+      </div>
+
+      <h2>The Alphabet</h2>
+      <ul class="abyx-grid">
+        <li><b>A</b><span class="abyx-combo" aria-label="Y Y Y"><i class="abyx-btn abyx-btn--y">Y</i><i class="abyx-btn abyx-btn--y">Y</i><i class="abyx-btn abyx-btn--y">Y</i></span></li>
+        <li><b>B</b><span class="abyx-combo" aria-label="Y Y X"><i class="abyx-btn abyx-btn--y">Y</i><i class="abyx-btn abyx-btn--y">Y</i><i class="abyx-btn abyx-btn--x">X</i></span></li>
+        <li><b>C</b><span class="abyx-combo" aria-label="Y Y A"><i class="abyx-btn abyx-btn--y">Y</i><i class="abyx-btn abyx-btn--y">Y</i><i class="abyx-btn abyx-btn--a">A</i></span></li>
+        <li><b>D</b><span class="abyx-combo" aria-label="Y Y B"><i class="abyx-btn abyx-btn--y">Y</i><i class="abyx-btn abyx-btn--y">Y</i><i class="abyx-btn abyx-btn--b">B</i></span></li>
+        <li><b>E</b><span class="abyx-combo" aria-label="Y X Y"><i class="abyx-btn abyx-btn--y">Y</i><i class="abyx-btn abyx-btn--x">X</i><i class="abyx-btn abyx-btn--y">Y</i></span></li>
+        <li><b>F</b><span class="abyx-combo" aria-label="Y X X"><i class="abyx-btn abyx-btn--y">Y</i><i class="abyx-btn abyx-btn--x">X</i><i class="abyx-btn abyx-btn--x">X</i></span></li>
+        <li><b>G</b><span class="abyx-combo" aria-label="Y X A"><i class="abyx-btn abyx-btn--y">Y</i><i class="abyx-btn abyx-btn--x">X</i><i class="abyx-btn abyx-btn--a">A</i></span></li>
+        <li><b>H</b><span class="abyx-combo" aria-label="Y X B"><i class="abyx-btn abyx-btn--y">Y</i><i class="abyx-btn abyx-btn--x">X</i><i class="abyx-btn abyx-btn--b">B</i></span></li>
+        <li><b>I</b><span class="abyx-combo" aria-label="Y A Y"><i class="abyx-btn abyx-btn--y">Y</i><i class="abyx-btn abyx-btn--a">A</i><i class="abyx-btn abyx-btn--y">Y</i></span></li>
+        <li><b>J</b><span class="abyx-combo" aria-label="Y A X"><i class="abyx-btn abyx-btn--y">Y</i><i class="abyx-btn abyx-btn--a">A</i><i class="abyx-btn abyx-btn--x">X</i></span></li>
+        <li><b>K</b><span class="abyx-combo" aria-label="Y A A"><i class="abyx-btn abyx-btn--y">Y</i><i class="abyx-btn abyx-btn--a">A</i><i class="abyx-btn abyx-btn--a">A</i></span></li>
+        <li><b>L</b><span class="abyx-combo" aria-label="Y A B"><i class="abyx-btn abyx-btn--y">Y</i><i class="abyx-btn abyx-btn--a">A</i><i class="abyx-btn abyx-btn--b">B</i></span></li>
+        <li><b>M</b><span class="abyx-combo" aria-label="Y B Y"><i class="abyx-btn abyx-btn--y">Y</i><i class="abyx-btn abyx-btn--b">B</i><i class="abyx-btn abyx-btn--y">Y</i></span></li>
+        <li><b>N</b><span class="abyx-combo" aria-label="Y B X"><i class="abyx-btn abyx-btn--y">Y</i><i class="abyx-btn abyx-btn--b">B</i><i class="abyx-btn abyx-btn--x">X</i></span></li>
+        <li><b>O</b><span class="abyx-combo" aria-label="Y B A"><i class="abyx-btn abyx-btn--y">Y</i><i class="abyx-btn abyx-btn--b">B</i><i class="abyx-btn abyx-btn--a">A</i></span></li>
+        <li><b>P</b><span class="abyx-combo" aria-label="Y B B"><i class="abyx-btn abyx-btn--y">Y</i><i class="abyx-btn abyx-btn--b">B</i><i class="abyx-btn abyx-btn--b">B</i></span></li>
+        <li><b>Q</b><span class="abyx-combo" aria-label="X Y Y"><i class="abyx-btn abyx-btn--x">X</i><i class="abyx-btn abyx-btn--y">Y</i><i class="abyx-btn abyx-btn--y">Y</i></span></li>
+        <li><b>R</b><span class="abyx-combo" aria-label="X Y X"><i class="abyx-btn abyx-btn--x">X</i><i class="abyx-btn abyx-btn--y">Y</i><i class="abyx-btn abyx-btn--x">X</i></span></li>
+        <li><b>S</b><span class="abyx-combo" aria-label="X Y A"><i class="abyx-btn abyx-btn--x">X</i><i class="abyx-btn abyx-btn--y">Y</i><i class="abyx-btn abyx-btn--a">A</i></span></li>
+        <li><b>T</b><span class="abyx-combo" aria-label="X Y B"><i class="abyx-btn abyx-btn--x">X</i><i class="abyx-btn abyx-btn--y">Y</i><i class="abyx-btn abyx-btn--b">B</i></span></li>
+        <li><b>U</b><span class="abyx-combo" aria-label="X X Y"><i class="abyx-btn abyx-btn--x">X</i><i class="abyx-btn abyx-btn--x">X</i><i class="abyx-btn abyx-btn--y">Y</i></span></li>
+        <li><b>V</b><span class="abyx-combo" aria-label="X X X"><i class="abyx-btn abyx-btn--x">X</i><i class="abyx-btn abyx-btn--x">X</i><i class="abyx-btn abyx-btn--x">X</i></span></li>
+        <li><b>W</b><span class="abyx-combo" aria-label="X X A"><i class="abyx-btn abyx-btn--x">X</i><i class="abyx-btn abyx-btn--x">X</i><i class="abyx-btn abyx-btn--a">A</i></span></li>
+        <li><b>X</b><span class="abyx-combo" aria-label="X X B"><i class="abyx-btn abyx-btn--x">X</i><i class="abyx-btn abyx-btn--x">X</i><i class="abyx-btn abyx-btn--b">B</i></span></li>
+        <li><b>Y</b><span class="abyx-combo" aria-label="X A Y"><i class="abyx-btn abyx-btn--x">X</i><i class="abyx-btn abyx-btn--a">A</i><i class="abyx-btn abyx-btn--y">Y</i></span></li>
+        <li><b>Z</b><span class="abyx-combo" aria-label="X A X"><i class="abyx-btn abyx-btn--x">X</i><i class="abyx-btn abyx-btn--a">A</i><i class="abyx-btn abyx-btn--x">X</i></span></li>
+      </ul>
+
+      <h2>Try It</h2>
+      <p>The specimen came with a web app that turns each combination into a letter. This is a rebuild of that app. Press three buttons to type a letter, using the buttons below, the A, B, X and Y keys on a keyboard, or a connected game controller.</p>
+      <div class="abyx-demo" id="abyx-demo">
+        <div class="abyx-pad">
+          <button type="button" class="abyx-btn abyx-btn--y" data-k="Y">Y</button>
+          <button type="button" class="abyx-btn abyx-btn--x" data-k="X">X</button>
+          <button type="button" class="abyx-btn abyx-btn--b" data-k="B">B</button>
+          <button type="button" class="abyx-btn abyx-btn--a" data-k="A">A</button>
+        </div>
+        <p class="abyx-pressed" aria-live="polite">Pressed: <span id="abyx-pressed">_ _ _</span></p>
+        <p class="abyx-out" aria-live="polite"><span>Output</span><strong id="abyx-out"></strong></p>
+        <div class="abyx-actions">
+          <button type="button" class="btn" id="abyx-erase">Erase Last Letter</button>
+          <button type="button" class="btn" id="abyx-clear">Clear Output</button>
+        </div>
+        <p class="abyx-hint">Try H: Y, X, B.</p>
+      </div>
+
+      <h2>Why It Matters</h2>
+      <p>ABYX is more than a font. It is a communication tool that imagines game interfaces going beyond entertainment and becoming platforms for equity, creativity and voice. It invites designers, developers and accessibility advocates to rethink how an alphabet can be encoded: by touch and interaction as well as by sight.</p>
+    </article>
+
+    <div class="case__bottom">
+      <a class="btn" href="portfolio.html#rmit"><img class="btn__back" src="assets/back.svg" alt="">Back</a>
+      <a class="btn" href="buzzar.html">Next<img class="btn__back btn__next" src="assets/back.svg" alt=""></a>
+    </div>
+  </main>
+  <script src="abyx.js"></script>
+  <script src="lightbox.js"></script>
+</body>
+</html>

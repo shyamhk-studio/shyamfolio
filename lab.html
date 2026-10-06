@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Game Lab · Shyam Harikumar</title>
+  <meta name="description" content="Small games Shyam designs and builds to explore interaction, game feel and play.">
+  <link rel="preload" href="fonts/montserrat-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="case lab">
+    <a class="btn case__top" href="portfolio.html#work"><img class="btn__back" src="assets/back.svg" alt="">Back</a>
+
+    <header class="card lab-head">
+      <p class="lab-kicker">Side quests</p>
+      <h1 class="lab-title outlined">Game Lab</h1>
+      <p class="lab-intro">Small games I design and build to explore interaction, game feel and play. Each one is an experiment: a mechanic, a look, a bit of personality. Some are silly. All of them are playable.</p>
+    </header>
+
+    <article class="card exp" id="squircle-runner" aria-labelledby="exp1-title">
+      <div class="exp__top">
+        <span class="exp__num">01</span>
+        <div>
+          <h2 id="exp1-title" class="exp__title">Squircle Runner</h2>
+          <ul class="exp__tags" aria-label="Details">
+            <li>Endless runner</li><li>Canvas + JavaScript</li><li>2026</li>
+          </ul>
+        </div>
+      </div>
+
+      <section class="arcade arcade--inline" id="arcade" data-inline aria-label="Squircle Runner game">
+        <canvas class="arcade__screen" id="arcade-canvas" width="720" height="270" tabindex="0" aria-label="Game screen. Press Space or tap to jump."></canvas>
+        <p class="arcade__help">Click the screen, then press Space or ↑ to jump (or tap on a phone). Hold for a higher jump. Grab the black squircles for bonus points.</p>
+      </section>
+
+      <div class="exp__notes">
+        <div class="note">
+          <h3>The idea</h3>
+          <p>A hidden easter egg for my portfolio. The cat comes from my bio (the one I'm teaching English). It lives behind the coin slot in the footer, so curious visitors find it and everyone else never sees it.</p>
+        </div>
+        <div class="note">
+          <h3>Game feel</h3>
+          <p>Squash and stretch on every jump and landing, a tap-for-short, hold-for-high jump, and a hitbox slightly smaller than the cat so near misses feel fair. The speed ramps up gently, and gaps grow with it so every obstacle stays clearable.</p>
+        </div>
+        <div class="note">
+          <h3>The look</h3>
+          <p>A Flappy Bird sky meets my portfolio's language: thick black outlines, hard offset shadows and squircles everywhere. The obstacles are the site's own cards and chunky buttons.</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="card exp" id="design-quest" aria-labelledby="exp2-title">
+      <div class="exp__top">
+        <span class="exp__num">02</span>
+        <div>
+          <h2 id="exp2-title" class="exp__title">Design Quest</h2>
+          <ul class="exp__tags" aria-label="Details">
+            <li>Top-down pixel RPG</li><li>Canvas + JavaScript</li><li>2026</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="rpg" id="rpg" tabindex="0" aria-label="Design Quest game. Arrow keys or WASD to move, Z, Space or Enter to talk.">
+        <div class="rpg__screen">
+          <canvas width="240" height="160" aria-hidden="true"></canvas>
+          <div class="rpg__place" aria-live="polite"><span class="rpg__place-name"></span><span class="rpg__place-years"></span></div>
+          <div class="rpg__stamps" role="img"></div>
+          <div class="rpg__dialog" hidden aria-live="polite">
+            <span class="rpg__who"></span>
+            <p class="rpg__text"></p>
+            <span class="rpg__more" aria-hidden="true"><span class="ico ico--down" aria-hidden="true"></span></span>
+          </div>
+          <div class="rpg__title">
+            <p class="rpg__logo">Design Quest</p>
+            <p class="rpg__tag">A walk through Shyam's life in design</p>
+            <p class="rpg__start">Press Start</p>
+            <p class="rpg__keys">Click here, then Enter · or tap</p>
+          </div>
+          <div class="rpg__end" hidden>
+            <p class="rpg__logo">Journey complete!</p>
+            <p class="rpg__tag"><span class="rpg__end-count"></span> · 2015 <span class="ico-arrow" aria-hidden="true"></span> Now</p>
+            <div class="rpg__end-actions">
+              <a class="btn" href="portfolio.html#contact">Get in touch</a>
+              <button class="btn rpg__replay" type="button">Play again</button>
+            </div>
+          </div>
+        </div>
+        <div class="rpg__pad" aria-hidden="true">
+          <div class="rpg__dpad">
+            <button type="button" tabindex="-1" data-pad="up" class="is-up"><span class="ico" aria-hidden="true"></span></button>
+            <button type="button" tabindex="-1" data-pad="left" class="is-left"><span class="ico ico--left" aria-hidden="true"></span></button>
+            <button type="button" tabindex="-1" data-pad="right" class="is-right"><span class="ico ico--right" aria-hidden="true"></span></button>
+            <button type="button" tabindex="-1" data-pad="down" class="is-down"><span class="ico ico--down" aria-hidden="true"></span></button>
+          </div>
+          <button type="button" tabindex="-1" data-pad="a" class="rpg__a">A</button>
+        </div>
+        <p class="arcade__help">Arrow keys or WASD to walk. Z, Space or Enter to talk to people and read signs. On a phone, use the pad. Walk right to follow the journey from 2015 to now, collect all 7 stamps, and step inside the Glance tower to see the framed work.</p>
+      </div>
+
+      <div class="exp__notes">
+        <div class="note">
+          <h3>The idea</h3>
+          <p>My portfolio as a place you can walk through. Each stop on the road is a chapter: engineering in Manipal, my first design gigs, Supr Daily, Eloelo, Glance, the move to Melbourne, and my studio today.</p>
+        </div>
+        <div class="note">
+          <h3>Game feel</h3>
+          <p>Grid-based walking with a little stride animation, a cat that follows one step behind, typewriter text boxes, a place-name banner as you enter each chapter, and a stamp for every stop.</p>
+        </div>
+        <div class="note">
+          <h3>The look</h3>
+          <p>A love letter to Game Boy Advance-era RPGs, in original pixel art drawn entirely in code at the GBA's 240×160 resolution. The palette borrows my site's lavender, butter and salmon.</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="card exp exp--next" aria-labelledby="exp3-title">
+      <div class="exp__top">
+        <span class="exp__num">03</span>
+        <div>
+          <h2 id="exp3-title" class="exp__title">Next experiment</h2>
+          <ul class="exp__tags" aria-label="Details"><li>In the works</li></ul>
+        </div>
+      </div>
+      <div class="exp__slot">
+        <p class="exp__slot-label">Insert coin</p>
+        <p>Another game is being designed. Check back soon.</p>
+      </div>
+    </article>
+
+    <div class="case__bottom">
+      <a class="btn" href="portfolio.html"><img class="btn__back" src="assets/back.svg" alt="">Home</a>
+    </div>
+  </main>
+
+  <script src="game.js"></script>
+  <script src="sprites.js"></script>
+  <script src="rpg.js"></script>
+</body>
+</html>

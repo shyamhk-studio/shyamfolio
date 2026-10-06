@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shyam Harikumar · Design Quest</title>
+  <meta name="description" content="The portfolio of Shyam Harikumar, visual designer in Melbourne, as a top-down pixel-art RPG. Press Start to explore, or skip to the classic portfolio.">
+  <meta property="og:title" content="Shyam Harikumar · Design Quest">
+  <meta property="og:description" content="A visual designer's portfolio you can walk through. Press Start, or skip to the classic portfolio.">
+  <link rel="preload" href="fonts/pixelify-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/montserrat-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="play-page">
+  <header class="play-bar">
+    <h1 class="play-name">Shyam Harikumar <span>Visual designer · Melbourne</span></h1>
+    <a class="view-toggle view-toggle--inline" href="portfolio.html">Classic view <span class="ico-arrow" aria-hidden="true"></span></a>
+  </header>
+
+  <main class="play-main">
+    <div class="rpg rpg--full" id="rpg" tabindex="0" aria-label="Design Quest, Shyam's portfolio as a game. Arrow keys or WASD to move, Z, Space or Enter to talk.">
+      <div class="rpg__screen">
+        <canvas width="240" height="160" aria-hidden="true"></canvas>
+        <div class="rpg__place" aria-live="polite"><span class="rpg__place-name"></span><span class="rpg__place-years"></span></div>
+        <div class="rpg__stamps" role="img"></div>
+        <div class="rpg__dialog" hidden aria-live="polite">
+          <span class="rpg__who"></span>
+          <p class="rpg__text"></p>
+          <span class="rpg__more" aria-hidden="true"><span class="ico ico--down" aria-hidden="true"></span></span>
+        </div>
+        <div class="rpg__title">
+          <p class="rpg__logo">Design Quest</p>
+          <p class="rpg__tag">The portfolio of Shyam Harikumar, visual designer</p>
+          <div class="rpg__doors">
+            <button class="rpg__door rpg__door--start" type="button"><span class="ico ico--right" aria-hidden="true"></span> Press Start</button>
+            <a class="rpg__door rpg__door--skip" href="portfolio.html">Skip to portfolio <span class="ico-arrow" aria-hidden="true"></span></a>
+          </div>
+          <p class="rpg__keys"><kbd class="rpg__key">Enter</kbd> to start · arrows to walk · <kbd class="rpg__key">Z</kbd> to talk</p>
+        </div>
+        <div class="rpg__end" hidden>
+          <p class="rpg__logo">Journey complete!</p>
+          <p class="rpg__tag"><span class="rpg__end-count"></span> · 2015 <span class="ico-arrow" aria-hidden="true"></span> Now</p>
+          <div class="rpg__end-actions">
+            <a class="btn" href="portfolio.html#contact">Get in touch</a>
+            <a class="btn" href="portfolio.html#work">See the work</a>
+            <button class="btn rpg__replay" type="button">Play again</button>
+          </div>
+        </div>
+      </div>
+      <div class="rpg__pad" aria-hidden="true">
+        <div class="rpg__dpad">
+          <button type="button" tabindex="-1" data-pad="up" class="is-up"><span class="ico" aria-hidden="true"></span></button>
+          <button type="button" tabindex="-1" data-pad="left" class="is-left"><span class="ico ico--left" aria-hidden="true"></span></button>
+          <button type="button" tabindex="-1" data-pad="right" class="is-right"><span class="ico ico--right" aria-hidden="true"></span></button>
+          <button type="button" tabindex="-1" data-pad="down" class="is-down"><span class="ico ico--down" aria-hidden="true"></span></button>
+        </div>
+        <button type="button" tabindex="-1" data-pad="a" class="rpg__a">A</button>
+      </div>
+    </div>
+    <noscript><p class="play-noscript">This page is a small game. <a href="portfolio.html">View the classic portfolio</a> instead.</p></noscript>
+  </main>
+
+  <footer class="play-foot">
+    <p>Arrow keys or WASD to walk · Z, Space or Enter to talk · <a href="portfolio.html">Classic portfolio</a> · <a href="mailto:shyamhk96@gmail.com">shyamhk96@gmail.com</a></p>
+  </footer>
+
+  <script src="sprites.js"></script>
+  <script src="rpg.js"></script>
+  <script>
+    /* Front door: focus the game so Enter starts it right away */
+    (function () {
+      var rpg = document.getElementById('rpg');
+      var start = document.querySelector('.rpg__door--start');
+      try { rpg.focus({ preventScroll: true }); } catch (e) {}
+      start.addEventListener('click', function (e) {
+        e.stopPropagation();
+        rpg.focus({ preventScroll: true });
+        window.__designQuest && window.__designQuest.start();
+      });
+    })();
+  </script>
+</body>
+</html>

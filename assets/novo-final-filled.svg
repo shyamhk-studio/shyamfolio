@@ -1,0 +1,54 @@
+<svg width="341" height="83" viewBox="0 0 341 83" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Novo Project Page">
+<g id="Rebranding Card">
+<g id="Rebranding Page">
+<g id="Card">
+<g id="Layer_1" clip-path="url(#clip1_2012_2)">
+<g id="Clip path group">
+<mask id="mask0_2012_2" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="341" height="83">
+<g id="clippath">
+<path id="Vector" d="M340.898 0H0V82.7052H340.898V0Z" fill="white"/>
+</g>
+</mask>
+<g mask="url(#mask0_2012_2)">
+<g id="Group">
+<path id="Vector_2" d="M50.367 1.40235C31.9617 6.2158 26.8802 19.1881 26.8802 19.1881C22.9934 25.3538 22.9395 36.6596 23.0307 40.3193V82.7057H0.000244141V39.1118C0.000244141 28.4428 4.55905 18.1254 12.4986 10.777C14.7261 8.71763 17.157 6.92706 19.7454 5.44251C20.5626 4.97936 21.3258 4.5741 22.0725 4.20606L22.0808 4.21433L22.2343 4.13163C23.1967 3.68502 24.0844 3.26322 25.0177 2.89518C29.7715 1.02605 34.8363 0.0708008 40.0506 0.0708008C43.6138 0.0790713 47.0692 0.538085 50.367 1.40649" fill="white"/>
+<path id="Vector_3" d="M82.5897 39.1073V82.7054H59.5344V39.1073C59.5344 29.9436 51.9101 22.4877 42.5394 22.4877C41.0585 22.4877 39.6108 22.6738 38.2378 23.0253C38.8227 21.7971 39.532 20.5648 40.3824 19.3449C46.7705 10.2391 53.9551 8.03084 59.7791 8.24588C59.7791 8.24588 82.5897 8.23347 82.5897 39.1073Z" fill="white"/>
+<path id="Vector_4" d="M113.999 58.7415C114.14 58.9441 114.285 59.1508 114.443 59.3452L114.397 59.4444C114.265 59.2129 114.12 58.973 113.995 58.7415" fill="white"/>
+<path id="Vector_5" d="M231.587 67.2766L258.579 0H236.693C236.693 0 225.779 27.8179 221.635 39.9094L231.583 67.2766H231.587Z" fill="white"/>
+</g>
+</g>
+</g>
+<path id="Vector_6" d="M175.865 0L208.029 82.7052H228.019L197.958 0H175.865Z" fill="white"/>
+<g id="Clip path group_2">
+<mask id="mask1_2012_2" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="341" height="83">
+<g id="clippath-1">
+<path id="Vector_7" d="M340.898 0H0V82.7052H340.898V0Z" fill="white"/>
+</g>
+</mask>
+<g mask="url(#mask1_2012_2)">
+<g id="Group_2">
+<path id="Vector_8" d="M269.127 69.1913C253.895 54.0066 255.107 28.062 270.48 12.7408C310.584 -24.1953 365.708 30.7499 328.657 70.7379C319.258 80.1084 306.452 83.9501 294.215 82.358C321.887 80.6212 335.058 45.8684 315.064 26.2921C305.025 15.9746 287.101 18.6336 280.356 31.2585C270.002 50.3717 290.901 71.2134 310.082 60.896C306.22 71.3623 294.161 78.2227 283.459 76.3949C283.459 76.3949 275.125 75.1668 269.131 69.1913" fill="white"/>
+<path id="Vector_9" d="M175.865 43.4161C175.865 65.0725 156.443 82.7094 134.524 82.7052C79.5117 80.5342 79.5034 2.17515 134.524 0C147.927 0 159.807 6.36417 167.394 16.1937C146.421 -2.23718 112.174 13.1832 112.431 41.3526C112.207 55.8426 126.892 66.6894 140.734 62.4838C161.79 56.2148 161.79 26.4988 140.734 20.2256C150.972 15.5072 164.478 19.1876 170.804 28.0991C170.804 28.0991 175.869 34.8975 175.869 43.4161" fill="white"/>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+<defs>
+<filter id="filter0_d_2012_2" x="-425.316" y="-2327.71" width="1187.53" height="2641.53" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dx="13.8947" dy="13.8947"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.35 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_2012_2"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_2012_2" result="shape"/>
+</filter>
+<clipPath id="clip1_2012_2">
+<rect width="340.898" height="82.7052" fill="white"/>
+</clipPath>
+</defs>
+</svg>
