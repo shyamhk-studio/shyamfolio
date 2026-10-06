@@ -152,8 +152,8 @@
     ["Morning! Milk run done by 7am.", "That user manual you designed for us delivery execs? Made my first week so much easier.", "And I keep seeing your banners and brand collabs everywhere: Cadbury, Nestlé, Monster Energy!"]);
   npc(41, 10, { hair: '#2a1c18', skin: '#b88660', shirt: '#3fa64a', pants: '#34384a' }, 'Michelle',
     ["Shyam! I'm Michelle, your manager here at Supr Daily.", "I could see a designer in you before you called yourself one.", "You just needed someone to hand you the brief and trust you with it. Look how far you've come! This one's yours."], 2);
-  npc(43, 10, { hair: '#1e1a1a', skin: '#a8704c', shirt: '#8a94a8', pants: '#34384a' }, 'Tarun',
-    ["Shyam! It's Tarun. Fine, Bob. Everyone here calls me Bob.", "I showed you a design trick or two back then. Okay, maybe a few hundred.", "Good to see you still use them. Michelle, Rahul, you and me: best corner of the marketing team."], 2);
+  npc(43, 10, { hair: '#1e1a1a', skin: '#a8704c', shirt: '#8a94a8', pants: '#34384a' }, 'Tharun',
+    ["Shyam! It's Tharun. Fine, Bob. Everyone here calls me Bob.", "I showed you a design trick or two back then. Okay, maybe a few hundred.", "Good to see you still use them. Michelle, Rahul, you and me: best corner of the marketing team."], 2);
   npc(45, 10, { hair: '#1c1616', skin: '#b07850', shirt: '#f4b6c2', pants: '#3a4462' }, 'Rahul',
     ["Rahul here. Words guy.", "A good design gets a look. A good one-liner gets remembered.", "Keep it quirky, keep it short. See? That was six words."], 2);
   obj('crates', 36, 13, 'Milk crates', ["Crates of fresh milk.", "Somebody designed the push notification that sold all of these."]);
@@ -1010,7 +1010,7 @@
   // look: {hair, skin, shirt, pants, jacket?, tee?, glasses?, beard?, cap?, coat?}
   // sprites from sprites.js: palette-indexed grids, outlined here in ink
   var SPR = window.DQ_SPRITES || null;
-  var NPC_SPRITE = { 'Mom': 'mom', 'Professor': 'professor', 'Kushal': 'kushal', 'Michelle': 'michelle', 'Debasish': 'debasish', 'Arnab': 'arnab', 'Tarun': 'tarun', 'Rahul': 'rahul', 'Nayanika': 'nayanika', 'Vinay': 'vinay', 'Shubham': 'shubham', 'Delivery exec': 'delivery-exec',
+  var NPC_SPRITE = { 'Mom': 'mom', 'Professor': 'professor', 'Kushal': 'kushal', 'Michelle': 'michelle', 'Debasish': 'debasish', 'Arnab': 'arnab', 'Tharun': 'tarun', 'Rahul': 'rahul', 'Nayanika': 'nayanika', 'Vinay': 'vinay', 'Shubham': 'shubham', 'Delivery exec': 'delivery-exec',
     'Streamer': 'streamer', 'Colleague': 'colleague', 'Cricket fan': 'cricket-fan', 'Classmate': 'classmate', 'Design lead': 'lead', 'Tutor': 'lead', 'Gamer': 'gamer', 'Moderator': 'moderator' };
   function gridSprite(key, rows, pal, flip) {
     if (cache[key]) return cache[key];
