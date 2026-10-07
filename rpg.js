@@ -159,7 +159,7 @@
   obj('crates', 36, 13, 'Milk crates', ["Crates of fresh milk.", "Somebody designed the push notification that sold all of these."]);
   door('supr', 'Supr Daily', ["The shop smells like fresh bread and push notifications."]);
 
-  sign(48, 10, 'Signpost', ["ELOELO", "Visual & UI Designer, Oct 2021 – Nov 2022."]);
+  sign(48, 10, 'Signpost', ["ELOELO", "Visual & Product Designer, Sep 2021 – Nov 2022."]);
   obj('streamrig', 51, 10, 'Streaming setup', ["A ring light and a phone on a tripod.", "The red dot means it's live. Wave to chat!"]);
   npc(50, 10, { hair: '#7a54d8', skin: '#c8906a', shirt: '#2a2a38', pants: '#2a2a38' }, 'Streamer',
     ["I'm live right now! Say hi to chat!", "You rebranded the whole app: new logo, brand font and colours. Eloelo became Elo Live!", "And that custom game for the Lay's collab? Chat loved it. Take a stamp!", "Come inside the studio! Your work is up on the big screens."], 3);
