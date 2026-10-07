@@ -147,7 +147,7 @@
     ["Welcome to The College Fever! I'm Kushal, the CEO.", "We need posts for all our social channels, and posters for our clients' events. By Friday!", "Your first real design job. Nice work! Here's your stamp."], 1);
   door('fever', 'The College Fever', ["A poster-covered office. Your first design desk is in here."]);
 
-  sign(35, 10, 'Signpost', ["SUPR DAILY by SWIGGY", "Visual Designer, Mar 2020 – Oct 2021."]);
+  sign(35, 10, 'Signpost', ["SUPR DAILY by SWIGGY", "Visual Designer, Mar 2020 – Sep 2021."]);
   npc(37, 13, { hair: '#2a2020', skin: '#9c6a48', shirt: '#fc8019', pants: '#34384a', cap: '#fc8019' }, 'Delivery exec',
     ["Morning! Milk run done by 7am.", "That user manual you designed for us delivery execs? Made my first week so much easier.", "And I keep seeing your banners and brand collabs everywhere: Cadbury, Nestlé, Monster Energy!"]);
   npc(41, 10, { hair: '#2a1c18', skin: '#b88660', shirt: '#3fa64a', pants: '#34384a' }, 'Michelle',
