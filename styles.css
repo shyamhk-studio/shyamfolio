@@ -1654,3 +1654,8 @@ html.lb-open { overflow: hidden; }
 /* Footer hint: keyboard wording on desktop, pad wording on touch screens */
 .foot-touch { display: none; }
 @media not ((hover: hover) and (pointer: fine)) { .foot-keys { display: none; } .foot-touch { display: inline; } }
+
+/* Contact: CV and LinkedIn buttons */
+.contact__links { margin-top: calc(22 * var(--u)); flex-wrap: wrap; }
+.contact__links .btn { text-decoration: none; display: inline-flex; align-items: center; justify-content: center; }
+@media (max-width: 700px) { .contact__links { margin-top: 12px; } }
