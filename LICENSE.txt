@@ -1,0 +1,25 @@
+Copyright (c) 2026 Shyam Harikumar. All rights reserved.
+
+This repository contains the personal portfolio website of Shyam Harikumar,
+including the game "Design Quest".
+
+The contents of this repository, including the design, artwork, pixel art,
+characters, written content, case studies, images and source code, are the
+property of Shyam Harikumar unless stated otherwise below.
+
+You may view this website and its source for personal reference.
+
+You may not copy, reproduce, modify, redistribute, republish or reuse any part
+of this repository, in whole or in part, for any purpose, without prior
+written permission from the copyright holder.
+
+Exceptions:
+- Client and employer work shown in the case studies (for example work made
+  for Glance, Nostra, Novo, 1Weather, Eloelo, Supr Daily and The College
+  Fever) is shown for portfolio purposes. Those brands, names and logos
+  belong to their respective owners.
+- The fonts in the "fonts" folder (Montserrat, Pixelify Sans and Inter) are
+  licensed by their authors under the SIL Open Font License and are not
+  covered by this notice.
+
+For permission requests, contact: shyamhk96@gmail.com
