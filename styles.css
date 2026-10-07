@@ -1659,3 +1659,5 @@ html.lb-open { overflow: hidden; }
 .contact__links { margin-top: calc(22 * var(--u)); flex-wrap: wrap; }
 .contact__links .btn { text-decoration: none; display: inline-flex; align-items: center; justify-content: center; }
 @media (max-width: 700px) { .contact__links { margin-top: 12px; } }
+
+.play-copy { margin-top: 6px; font-size: 12px; opacity: 0.75; }
