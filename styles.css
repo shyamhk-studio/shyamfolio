@@ -1,3 +1,7 @@
+:root { color-scheme: only light; }
+/* Declaring a dark-scheme rule tells browsers with forced dark modes (Samsung Internet, Chrome auto-dark)
+   that the site manages its own colours, so they leave it alone. Colours stay the same on purpose. */
+@media (prefers-color-scheme: dark) { :root { color-scheme: only light; } }
 /* Shyam Harikumar — portfolio
    Built from the "Portfolio 2025 – Final" Figma file (1440px desktop frame).
    Every size is written in design pixels × --u, so the site matches Figma
