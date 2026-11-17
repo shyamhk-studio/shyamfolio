@@ -1930,3 +1930,26 @@ html.lb-open { overflow: hidden; }
 .pgrid--3 .pcard__tags { font-size: calc(14 * var(--u)); }
 .pgrid--3 .pcard .pcard__go { font-size: calc(18 * var(--u)); height: calc(48 * var(--u)); }
 @media (max-width: 700px) { .pgrid--3 .pcard .pcard__go { font-size: 16px; height: 44px; } }
+
+/* ---- Phone fixes (kept last so nothing above overrides them) ---- */
+.hero > * { min-width: 0; }
+.hero__game-video { max-width: 100%; height: auto; }
+@media (max-width: 700px) {
+  /* Safari sizes the grid column from the video's 720px width attribute; stop that */
+  .hero { grid-template-columns: minmax(0, 1fr); }
+  .hero__game { width: 100%; max-width: 360px; margin: 0 auto; }
+  .hero__game-screen { width: calc(100% - 8px); }
+  .hero__game-video { width: 100%; height: 100%; }
+  .hero__text { justify-self: center; text-align: center; }
+
+  /* Card text: headline leads, tags readable, button a step below the headline */
+  .pcard__kicker { font-size: 11px; }
+  .pcard--hook .pcard__title { font-size: 18px; min-height: 0; }
+  .pgrid--3 .pcard__title { font-size: 18px; }
+  .pgrid--3 .pcard__body { padding-top: 14px; gap: 6px; }
+  .pcard__tags, .pgrid--3 .pcard__tags { font-size: 13px; margin: 2px 0 10px; }
+  .pcard .pcard__go, .pgrid--3 .pcard .pcard__go { font-size: 15px; height: 44px; }
+
+  /* Smaller floating Game view pill so it covers less of the page */
+  .view-toggle { font-size: 13px; padding: 8px 14px; gap: 6px; border-width: 2.5px; }
+}
