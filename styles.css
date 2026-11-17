@@ -1932,9 +1932,9 @@ html.lb-open { overflow: hidden; }
 @media (max-width: 700px) { .pgrid--3 .pcard .pcard__go { font-size: 16px; height: 44px; } }
 
 /* ---- Phone fixes (kept last so nothing above overrides them) ---- */
-.hero > * { min-width: 0; }
-.hero__game-video { max-width: 100%; height: auto; }
 @media (max-width: 700px) {
+  .hero > * { min-width: 0; }
+  .hero__game-video { max-width: 100%; }
   /* Safari sizes the grid column from the video's 720px width attribute; stop that */
   .hero { grid-template-columns: minmax(0, 1fr); }
   .hero__game { width: 100%; max-width: 360px; margin: 0 auto; }
